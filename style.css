@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 520px;
+    max-width: 95%;
+    height: auto;
+    min-height: 100px;
+    margin: 100px auto;
+    background-color: #000;
+    border-radius: 5px;
+    border: 1px solid #0ef;
+    box-shadow: inset 0 0 0.5em 0 #0ef, 0 0 0.5em 0 #0ef;
+}
+
+/* Title */
+.base h4{
+    font-size: 34px;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 0px;
+    color:#0ef;
+    box-shadow: 0px 2px #bababa;
+    padding-bottom: 10px;
+}
+
+/* Input blocks container */
+.form-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Each block */
+.block{
+    width: 135px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Labels */
+p.title{
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    line-height: 0.5;
+    letter-spacing: 0.5px;
+    word-spacing: 2.7px;
+    color: #0ef;
+}
+
+/* Input fields (text or number) */
+input[type="text"],
+input[type="number"]{
+    width: 140px;
+    margin: auto;
+    outline: none;
+    min-height: 50px;
+    border: 2px solid #0ef;
+    padding: 12px;
+    background-color: #111;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    transition: border 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Remove number arrows/spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Focus highlight */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border: 3px solid #0ef;  
+    box-shadow: 0 0 10px #0ef; 
+    outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+    text-align: center;
+}
+
+input[type=button]{
+    width: 140px;
+    height: 50px;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: #0ef;
+    color:  #fff;
+    border: 1px solid #0ef;
+    padding: 5px;
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 0.5em 0 #0ef, 0 0 0.5em 0 #0ef;
+    transition: box-shadow 0.2s ease, color 0.2s ease;
+}
+
+input[type=button]:hover{
+    color: #000;
+    box-shadow: inset 0 0 1.5em 0 #0ef, 0 0 0.5em 0 #fff;
+}
+
+/* Age Output */
+#age{
+    padding: 20px;
+    overflow: hidden;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.5;
+    word-spacing: 2.7px;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px){
+    .form-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        width: 90%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+    }
+
+    input[type=button] {
+        width: 100%;
+    }
+
+    .base h4 {
+        font-size: 28px;
+    }
+}
