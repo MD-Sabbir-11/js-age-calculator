@@ -27,6 +27,12 @@ function age() {
         return; // Stop the function
     }
 
+    // ❗ Check for invalid inputs
+    if ( d1 > 31 || m1 > 12 || y1 > new Date().getFullYear() || d1 <= 0 || m1 <= 0 || y1 <= 0) {
+        document.getElementById("age").innerHTML = "<span style='color:red;'>Please enter valid input!</span>";
+        return; // Stop the function
+    }
+
     var date = new Date();
     var d2 = date.getDate();
     var m2 = 1 + date.getMonth();
@@ -57,4 +63,3 @@ function resetBorder(input){
         input.style.border = "2px solid red";
     }
 }
-
